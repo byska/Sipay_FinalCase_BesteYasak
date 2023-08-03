@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Sipay_FinalCase.Api.props" />
+</Project>

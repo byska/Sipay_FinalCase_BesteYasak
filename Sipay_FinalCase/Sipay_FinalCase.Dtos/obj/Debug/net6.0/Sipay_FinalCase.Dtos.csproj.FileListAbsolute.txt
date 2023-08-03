@@ -1,0 +1,17 @@
+D:\KD14\Sipay\Final\Sipay_FinalCase_BesteYasak\Sipay_FinalCase\Sipay_FinalCase.Dtos\bin\Debug\net6.0\Sipay_FinalCase.Dtos.deps.json
+D:\KD14\Sipay\Final\Sipay_FinalCase_BesteYasak\Sipay_FinalCase\Sipay_FinalCase.Dtos\bin\Debug\net6.0\Sipay_FinalCase.Dtos.dll
+D:\KD14\Sipay\Final\Sipay_FinalCase_BesteYasak\Sipay_FinalCase\Sipay_FinalCase.Dtos\bin\Debug\net6.0\Sipay_FinalCase.Dtos.pdb
+D:\KD14\Sipay\Final\Sipay_FinalCase_BesteYasak\Sipay_FinalCase\Sipay_FinalCase.Dtos\obj\Debug\net6.0\Sipay_FinalCase.Dtos.csproj.AssemblyReference.cache
+D:\KD14\Sipay\Final\Sipay_FinalCase_BesteYasak\Sipay_FinalCase\Sipay_FinalCase.Dtos\obj\Debug\net6.0\Sipay_FinalCase.Dtos.GeneratedMSBuildEditorConfig.editorconfig
+D:\KD14\Sipay\Final\Sipay_FinalCase_BesteYasak\Sipay_FinalCase\Sipay_FinalCase.Dtos\obj\Debug\net6.0\Sipay_FinalCase.Dtos.AssemblyInfoInputs.cache
+D:\KD14\Sipay\Final\Sipay_FinalCase_BesteYasak\Sipay_FinalCase\Sipay_FinalCase.Dtos\obj\Debug\net6.0\Sipay_FinalCase.Dtos.AssemblyInfo.cs
+D:\KD14\Sipay\Final\Sipay_FinalCase_BesteYasak\Sipay_FinalCase\Sipay_FinalCase.Dtos\obj\Debug\net6.0\Sipay_FinalCase.Dtos.csproj.CoreCompileInputs.cache
+D:\KD14\Sipay\Final\Sipay_FinalCase_BesteYasak\Sipay_FinalCase\Sipay_FinalCase.Dtos\obj\Debug\net6.0\Sipay_FinalCase.Dtos.dll
+D:\KD14\Sipay\Final\Sipay_FinalCase_BesteYasak\Sipay_FinalCase\Sipay_FinalCase.Dtos\obj\Debug\net6.0\refint\Sipay_FinalCase.Dtos.dll
+D:\KD14\Sipay\Final\Sipay_FinalCase_BesteYasak\Sipay_FinalCase\Sipay_FinalCase.Dtos\obj\Debug\net6.0\Sipay_FinalCase.Dtos.pdb
+D:\KD14\Sipay\Final\Sipay_FinalCase_BesteYasak\Sipay_FinalCase\Sipay_FinalCase.Dtos\obj\Debug\net6.0\ref\Sipay_FinalCase.Dtos.dll
+D:\KD14\Sipay\Final\Sipay_FinalCase_BesteYasak\Sipay_FinalCase\Sipay_FinalCase.Dtos\bin\Debug\net6.0\Sipay_FinalCase.Core.dll
+D:\KD14\Sipay\Final\Sipay_FinalCase_BesteYasak\Sipay_FinalCase\Sipay_FinalCase.Dtos\bin\Debug\net6.0\Sipay_FinalCase.Entities.dll
+D:\KD14\Sipay\Final\Sipay_FinalCase_BesteYasak\Sipay_FinalCase\Sipay_FinalCase.Dtos\bin\Debug\net6.0\Sipay_FinalCase.Entities.pdb
+D:\KD14\Sipay\Final\Sipay_FinalCase_BesteYasak\Sipay_FinalCase\Sipay_FinalCase.Dtos\bin\Debug\net6.0\Sipay_FinalCase.Core.pdb
+D:\KD14\Sipay\Final\Sipay_FinalCase_BesteYasak\Sipay_FinalCase\Sipay_FinalCase.Dtos\obj\Debug\net6.0\Sipay_FinalCase.Dtos.csproj.CopyComplete
