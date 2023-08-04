@@ -7,6 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Mapping\**" />
+    <Compile Remove="Services\**" />
+    <EmbeddedResource Remove="Mapping\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Mapping\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
   </ItemGroup>
 
@@ -14,10 +23,6 @@
     <ProjectReference Include="..\Sipay_FinalCase.Core\Sipay_FinalCase.Core.csproj" />
     <ProjectReference Include="..\Sipay_FinalCase.Dtos\Sipay_FinalCase.Dtos.csproj" />
     <ProjectReference Include="..\Sipay_FinalCase.Entities\Sipay_FinalCase.Entities.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Services\Admin\" />
   </ItemGroup>
 
 </Project>

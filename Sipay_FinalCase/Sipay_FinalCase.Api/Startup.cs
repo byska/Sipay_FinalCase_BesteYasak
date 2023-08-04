@@ -1,25 +1,8 @@
 using AutoMapper;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using Sipay_FinalCase.Business.Mapping;
-using Sipay_FinalCase.Business.Services.Apartment;
-using Sipay_FinalCase.Business.Services.Message;
-using Sipay_FinalCase.Business.Services.User;
 using Sipay_FinalCase.Core.UnitOfWork;
 using Sipay_FinalCase.DataAccess.Context;
-using Sipay_FinalCase.Entities.Abstract;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Sipay_FinalCase.Api
 {
@@ -50,17 +33,17 @@ namespace Sipay_FinalCase.Api
                 services.AddDbContext<FinalCaseDbContext>(opts =>
                 opts.UseSqlServer(dbConfig));
             }
-            services.AddScoped<IUow, Uow>();
+            //services.AddScoped<IUow, Uow>();
 
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.AddProfile(new MappingProfile());
-            });
-            services.AddSingleton(config.CreateMapper());
+            //var config = new MapperConfiguration(cfg =>
+            //{
+            //    cfg.AddProfile(new MappingProfile());
+            //});
+            //services.AddSingleton(config.CreateMapper());
 
-            services.AddScoped<IApartmentService, ApartmentService>();
-            services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IMessageAdminToUserService, MessageAdminToUserService>();
+            //services.AddScoped<IApartmentService, ApartmentService>();
+            //services.AddScoped<IUserService, UserService>();
+            //services.AddScoped<IMessageAdminToUserService, MessageAdminToUserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

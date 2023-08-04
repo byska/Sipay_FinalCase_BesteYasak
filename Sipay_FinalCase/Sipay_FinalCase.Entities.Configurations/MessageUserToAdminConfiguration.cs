@@ -13,6 +13,8 @@ namespace Sipay_FinalCase.Entities.Configurations
         public override void Configure(EntityTypeBuilder<MessageUserToAdmin> builder)
         {
             base.Configure(builder);
+            builder.HasOne(x => x.User).WithMany(x => x.MessageUserToAdmins).HasForeignKey(x => x.UserId);
+            builder.HasOne(x => x.Admin).WithMany(x => x.MessageUserToAdmins).HasForeignKey(x => x.AdminId);
         }
     }
 }

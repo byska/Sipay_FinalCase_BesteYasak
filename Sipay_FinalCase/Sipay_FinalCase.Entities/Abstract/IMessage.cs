@@ -12,7 +12,7 @@ namespace Sipay_FinalCase.Entities.Abstract
     {
         public string Text { get; set; }
         public Admin Admin { get; set; }
-        public int AdminId { get; set; }//From
+        public int AdminId { get; set; }
         public User User { get; set; }
         public int UserId { get; set; }
         public MessageStatus Status { get; set; }

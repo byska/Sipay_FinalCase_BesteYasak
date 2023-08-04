@@ -12,7 +12,6 @@ namespace Sipay_FinalCase.DataAccess.Context
         }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Apartment> Apartments { get; set; }
-        public DbSet<Message> Messages { get; set; }
         public DbSet<MessageAdminToUser> MessageAdminToUsers { get; set; }
         public DbSet<MessageUserToAdmin> MessageUserToAdmins { get; set; }
         public DbSet<User> Users { get; set; }

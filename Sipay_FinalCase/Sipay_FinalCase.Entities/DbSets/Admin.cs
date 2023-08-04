@@ -9,6 +9,11 @@ namespace Sipay_FinalCase.Entities.DbSets
 {
     public class Admin:BaseUser
     {
+        public Admin()
+        {
+            MessageAdminToUsers = new HashSet<MessageAdminToUser>();
+            MessageUserToAdmins = new HashSet<MessageUserToAdmin>();
+        }
         public ICollection<MessageAdminToUser> MessageAdminToUsers { get; set; }
         public ICollection<MessageUserToAdmin> MessageUserToAdmins { get; set; }
     }
