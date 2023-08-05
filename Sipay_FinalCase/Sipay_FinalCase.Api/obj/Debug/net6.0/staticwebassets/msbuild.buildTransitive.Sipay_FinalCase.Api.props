@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Sipay_FinalCase.Api.props" />
-</Project>
