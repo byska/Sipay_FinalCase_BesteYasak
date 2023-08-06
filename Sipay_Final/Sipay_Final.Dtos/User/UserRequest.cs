@@ -14,6 +14,6 @@ namespace Sipay_Final.Dtos.User
         public string? Tc { get; set; }
         public string? Phone { get; set; }
         public string? LicensePlate { get; set; }
-        public int? ApartmentId { get; set; }
+        public int ApartmentId { get; set; }
     }
 }

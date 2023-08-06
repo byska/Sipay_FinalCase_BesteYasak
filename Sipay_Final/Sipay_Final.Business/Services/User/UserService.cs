@@ -21,8 +21,6 @@ namespace Sipay_Final.Business.Services.User
         }
         public override ApiResponse<bool> Update(UserRequest entity, int id)
         {
-            try
-            {
                 var user = _uow.GetRepository<UserModel.User>().GetByID(id);
                 if (user == null)
                 {
@@ -40,12 +38,6 @@ namespace Sipay_Final.Business.Services.User
                 var result = _uow.GetRepository<UserModel.User>().Update(user);
                 _uow.Complete();
                 return new ApiResponse<bool>(result);
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex, "GenericService.Update");
-                return new ApiResponse<bool>(ex.Message);
-            }
         }
         
     }

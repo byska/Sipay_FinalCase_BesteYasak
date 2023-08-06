@@ -30,6 +30,7 @@ namespace Sipay_Final.Business.Mapping
             CreateMap<MessageToAdminRequest, MessageToAdmin>();
             CreateMap<MessageToAdmin,MessageToAdminResponse>();
 
+            CreateMap<PayInformation,ApartmentUpdateResponse>().ReverseMap().ForMember(dest=>dest.ApartmentId,config=>config.MapFrom(src=>src.Id));
             CreateMap<PayInformationResponse, PayInformation>().ReverseMap();
             CreateMap<PayInformation, PayInformationCreditResponse>()
                 .ForMember(dest => dest.Block, config => config.MapFrom(src => src.Apartment.Block))

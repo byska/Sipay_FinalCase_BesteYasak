@@ -15,7 +15,7 @@ namespace Sipay_Final.DataAccess.DataAccess.Abstract
         Task<IQueryable<T>> GetAllAsync(params Expression<Func<T, object>>[] includes);
         Task<IQueryable<T>> GetAllByParametersAsync(Expression<Func<T, object>> include,params Expression<Func<T, bool>>[] exps);
         Task<IQueryable<T>> GetAllAsync(Expression<Func<T, bool>> exp, params Expression<Func<T, object>>[] includes);
-        Task<T> GetByDefault(Expression<Func<T, bool>> exp);
+        Task<T> GetByDefault(params Expression<Func<T, bool>>[] exps);
         T GetByID(int id);
         IQueryable<T> GetByID(int id, params Expression<Func<T, object>>[] includes);
         Task<IEnumerable<T>> GetDefault(Expression<Func<T, bool>> exp);

@@ -20,8 +20,6 @@ namespace Sipay_Final.Business.Services.Message.MessageToAdmin
 
         public async Task<ApiResponse<bool>> AddMessage(MessageToAdminRequest request, int id)
         {
-            try
-            {
                 var admin = _uow.GetRepository<MessageToAdminModel.Admin>().GetByID(id);
                 var user = _uow.GetRepository<MessageToAdminModel.User>().GetByID(request.UserId);
                 if (user == null)
@@ -35,12 +33,6 @@ namespace Sipay_Final.Business.Services.Message.MessageToAdmin
                 var response = await _uow.GetRepository<MessageToAdminModel.MessageToAdmin>().Add(message);
                 _uow.Complete();
                 return new ApiResponse<bool>(response);
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex, "MessageToAdminService.AddMessage");
-                return new ApiResponse<bool>(false);
-            }
 
         }
     }

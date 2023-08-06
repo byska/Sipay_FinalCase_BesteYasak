@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "GdMPJZCafkSmjenq4eQErgqQCsJSTaPD5bLLIf6nVZA=",
+  "Source": "Sipay_Final.Payment",
+  "BasePath": "_content/Sipay_Final.Payment",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

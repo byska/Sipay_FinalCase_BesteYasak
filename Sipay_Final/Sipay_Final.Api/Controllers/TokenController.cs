@@ -18,7 +18,7 @@ namespace Sipay_Final.Api.Controllers
         [HttpPost("Login")]
         public async Task<ApiResponse<TokenResponse>> Post([FromBody] TokenRequest request)
         {
-            var response =await service.Login(request);
+            var response = await service.Login(request);
             return response;
         }
     }

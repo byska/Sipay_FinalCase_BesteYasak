@@ -11,7 +11,7 @@ using Sipay_Final.Entities.Enums;
 namespace Sipay_Final.Api.Controllers
 {
     [Authorize(Roles = "admin")]
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class ApartmentController : ControllerBase
     {
@@ -33,7 +33,7 @@ namespace Sipay_Final.Api.Controllers
         [HttpGet]
         public async Task<ApiResponse<List<ApartmentResponse>>> GetAll()
         {
-            var response = await _service.GetAll();
+            var response = await _service.GetAllWithParameters(x=>x.User,x=>x.IsActive==true);
             return response;
         }
         [HttpGet("{id}")]
@@ -59,9 +59,6 @@ namespace Sipay_Final.Api.Controllers
         {
            var response=await _service.SendBillDues(totalGasBill, totalElectricityBill, totalWaterBill, totalDues);
             return response;
-
-
-
         }
     }
 }

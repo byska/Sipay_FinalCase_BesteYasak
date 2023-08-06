@@ -17,7 +17,7 @@ namespace Sipay_Final.Entities.DbSets
         public string Phone { get; set; }
         public string? LicensePlate { get; set; }
         public Apartment Apartment { get; set; }
-        public int? ApartmentId { get; set; }
+        public int ApartmentId { get; set; }
         public ICollection<MessageToUser> IncomingToUser { get; set; }
 
     }

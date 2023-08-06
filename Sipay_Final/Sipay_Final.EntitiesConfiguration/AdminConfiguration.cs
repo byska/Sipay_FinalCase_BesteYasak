@@ -8,8 +8,7 @@ namespace Sipay_FinalCase.Entities.Configurations
     {
         public override void Configure(EntityTypeBuilder<Admin> builder)
         {
-            //builder.HasMany(x => x.MessageUserToAdmins).WithOne(x => x.Admin).HasForeignKey(x => x.AdminId);
-            //builder.HasMany(x => x.MessageAdminToUsers).WithOne(x => x.Admin).HasForeignKey(x => x.AdminId);
+            
             base.Configure(builder);
             builder.HasMany(x => x.IncomingToAdmin).WithOne(x => x.Admin).HasForeignKey(x => x.AdminId);
         }

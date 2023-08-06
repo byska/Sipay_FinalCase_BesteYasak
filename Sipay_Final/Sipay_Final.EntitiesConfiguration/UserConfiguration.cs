@@ -15,8 +15,6 @@ namespace Sipay_FinalCase.Entities.Configurations
             builder.Property(x=>x.LicensePlate).IsRequired(false).HasMaxLength(7);
 
             builder.HasMany(x => x.IncomingToUser).WithOne(x => x.User).HasForeignKey(x => x.UserId);
-            //builder.HasMany(x => x.MessageUserToAdmins).WithOne(x => x.User).HasForeignKey(x => x.UserId);
-            //builder.HasMany(x => x.MessageAdminToUsers).WithOne(x => x.User).HasForeignKey(x => x.UserId);
         }
     }
 }

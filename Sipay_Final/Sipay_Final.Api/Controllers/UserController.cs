@@ -35,7 +35,8 @@ namespace Sipay_Final.Api.Controllers
         public Task<ApiResponse<List<PayInformationResponse>>> GetBillDues()
         {
             var userid = (User.Identity as ClaimsIdentity).FindFirst("Id")?.Value;
-            var apartmentid = _apartmentService.GetAllForUpdate(x => x.User.Id == Convert.ToInt32(userid)).Result.Response.FirstOrDefault();
+            var id=Convert.ToInt32(userid);
+            var apartmentid = _apartmentService.GetAllForUpdate(x=>x.User,x => x.User.Id == id).Result.Response.FirstOrDefault();
           var billDues= _payInformationService.GetAllWithParameters(x=>x.Apartment,x => x.ApartmentId == apartmentid.Id,x=>x.IsActive==true);
             return billDues;
         }

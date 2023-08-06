@@ -1,10 +1,16 @@
 using AutoMapper;
+using Hangfire;
+using Hangfire.MemoryStorage;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Sipay_Cohorts_HW7.Api.Middlewares;
 using Sipay_Final.Business.Mapping;
 using Sipay_Final.Business.Services.Apartment;
+using Sipay_Final.Business.Services.Email;
+using Sipay_Final.Business.Services.Logger;
 using Sipay_Final.Business.Services.Message.MessageToAdmin;
 using Sipay_Final.Business.Services.Message.MessageToUser;
 using Sipay_Final.Business.Services.PayInformation;
@@ -34,6 +40,7 @@ namespace Sipay_Final.Api
             services.AddControllers();
             JwtConfig = Configuration.GetSection("JwtConfig").Get<JwtConfig>();
             services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
+            services.AddHangfire(configuration => configuration.UseMemoryStorage());
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Final Case", Version = "v1" });
@@ -67,6 +74,7 @@ namespace Sipay_Final.Api
                 services.AddDbContext<FinalDbContext>(opts =>
                 opts.UseSqlServer(dbConfig));
             }
+            
 
             services.AddAuthentication(x =>
             {
@@ -96,12 +104,16 @@ namespace Sipay_Final.Api
             });
             services.AddSingleton(config.CreateMapper());
 
+            services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
+
+            services.AddTransient<ILoggerService, LoggerService>();
             services.AddScoped<IApartmentService, ApartmentService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IPayInformationService, PayInformationService>();
             services.AddScoped<IMessageToUserService, MessageToUserService>();
             services.AddScoped<IMessageToAdminService, MessageToAdminService>();
+            services.AddScoped<IEmailService, EmailService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -113,12 +125,18 @@ namespace Sipay_Final.Api
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "FinalCase v1"));
             }
+            app.UseHangfireDashboard();
 
             app.UseHttpsRedirection();
+
+            //Global Exception Handler
+            app.UseCustomExceptionMiddle();
 
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseHangfireServer();
 
             app.UseEndpoints(endpoints =>
             {

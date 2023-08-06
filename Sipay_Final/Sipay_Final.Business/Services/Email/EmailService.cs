@@ -14,7 +14,7 @@ namespace Sipay_Final.Business.Services.Email
             _emailSettings = options.Value;
         }
 
-        public async Task SendResetPasswordEmail(string ToEmail, PayInformationModel.PayInformation payInformation)
+        public async Task SendReminder(string ToEmail, int? waterBill, int? electricityBill, int? gasBill, int? dues)
         {
             var smtpClient = new SmtpClient();
 
@@ -32,8 +32,11 @@ namespace Sipay_Final.Business.Services.Email
 
             mailMessage.Subject = "Localhost | Ödenmemiş Fatura Hatırlatma";
             mailMessage.Body = @$"
-                <h4>Ödenmemiş faturanız bulunmakta. Fatura bilgileriniz aşağıda mevcut</h4>;
-            <p> {}
+                <h4>Ödenmemiş faturanız bulunmaktadır. Fatura bilgileriniz aşağıda mevcuttur.</h4>;
+            <p> Aidat:{dues}</p>
+            <p> Su Faturası:{waterBill}</p>
+            <p> Doğalgaz Faturası:{gasBill}</p>
+            <p> Elektrik Faturası:{electricityBill}</p>";
 
             mailMessage.IsBodyHtml = true;
 

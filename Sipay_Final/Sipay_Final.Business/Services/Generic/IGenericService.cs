@@ -14,7 +14,7 @@ namespace Sipay_Final.Business.Services.Generic
         Task<ApiResponse<IQueryable<TResponse>>> GetAll(params Expression<Func<TEntity, object>>[] includes);
         Task<ApiResponse<List<TResponse>>> GetAllWithParameters(Expression<Func<TEntity, object>> include, params Expression<Func<TEntity, bool>>[] exps);
         Task<ApiResponse<IQueryable<TResponse>>> GetAll(Expression<Func<TEntity, bool>> exp, params Expression<Func<TEntity, object>>[] includes);
-        Task<ApiResponse<TResponse>> GetByDefault(Expression<Func<TEntity, bool>> exp);
+        Task<ApiResponse<TResponse>> GetByDefault(params Expression<Func<TEntity, bool>>[] exps);
         ApiResponse<TResponse> GetById(int id);
         ApiResponse<IQueryable<TResponse>> GetById(int id, params Expression<Func<TEntity, object>>[] includes);
         ApiResponse<bool> Remove(TEntity entity);

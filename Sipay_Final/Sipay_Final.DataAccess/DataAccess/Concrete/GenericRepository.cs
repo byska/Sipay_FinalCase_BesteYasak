@@ -87,12 +87,14 @@ namespace Sipay_Final.DataAccess.DataAccess.Concrete
         {
             
             IQueryable<T> query = _table.AsQueryable();
-
+            query = query.Include(include);
+            var queryList= query.ToList();
             foreach (var exp in exps)
             {
                 query = query.Where(exp);
             }
-            query=query.Include(include);
+            queryList = query.ToList();
+            
             return query;
         }
 
@@ -106,7 +108,16 @@ namespace Sipay_Final.DataAccess.DataAccess.Concrete
             return query;
         }
 
-        public async Task<T> GetByDefault(Expression<Func<T, bool>> exp) => await _table.FirstOrDefaultAsync(exp);
+        public async Task<T> GetByDefault(params Expression<Func<T, bool>>[] exps) 
+        {
+            IQueryable<T> query = _table.AsQueryable();
+
+            foreach (var exp in exps)
+            {
+                query = query.Where(exp);
+            }
+            return query.FirstOrDefault();
+        }
 
         public T GetByID(int id) => _table.Find(id);
 

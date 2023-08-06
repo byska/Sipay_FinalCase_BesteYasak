@@ -6,6 +6,6 @@ namespace Sipay_Final.Business.Services.Email
 { 
     public interface IEmailService 
     {
-        Task SendResetPasswordEmail(string ToEmail, PayInformationModel.PayInformation payInformation);
+        Task SendReminder(string ToEmail, int? waterBill,int? electricityBill,int? gasBill,int? dues);
     }
 }

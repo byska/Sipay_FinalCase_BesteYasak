@@ -30,6 +30,7 @@ namespace Sipay_Final.Business.Services.PayInformation
             var credit =await _uow.GetRepository<PayInformationModel.PayInformation>().GetAllByParametersAsync(x=>x.Apartment,x => x.BillDuesDate.Value.Month == currentMonth && x.BillDuesDate.Value.Year == currentYear,x=>x.IsActive==true);
 
            var creditResponse = _mapper.Map<List<PayInformationCreditResponse>>(credit.ToList());
+           
             return new ApiResponse<List<PayInformationCreditResponse>>(creditResponse);
         }
            

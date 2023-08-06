@@ -10,3 +10,15 @@ D:\KD14\FinalCase\Sipay_Final\Sipay_Final.Core\obj\Debug\net6.0\Sipay_Final.Core
 D:\KD14\FinalCase\Sipay_Final\Sipay_Final.Core\obj\Debug\net6.0\refint\Sipay_Final.Core.dll
 D:\KD14\FinalCase\Sipay_Final\Sipay_Final.Core\obj\Debug\net6.0\Sipay_Final.Core.pdb
 D:\KD14\FinalCase\Sipay_Final\Sipay_Final.Core\obj\Debug\net6.0\ref\Sipay_Final.Core.dll
+D:\KD14\Sipay\FinalCase\Sipay_FinalCase_BesteYasak\Sipay_Final\Sipay_Final.Core\bin\Debug\net6.0\Sipay_Final.Core.deps.json
+D:\KD14\Sipay\FinalCase\Sipay_FinalCase_BesteYasak\Sipay_Final\Sipay_Final.Core\bin\Debug\net6.0\Sipay_Final.Core.dll
+D:\KD14\Sipay\FinalCase\Sipay_FinalCase_BesteYasak\Sipay_Final\Sipay_Final.Core\bin\Debug\net6.0\Sipay_Final.Core.pdb
+D:\KD14\Sipay\FinalCase\Sipay_FinalCase_BesteYasak\Sipay_Final\Sipay_Final.Core\obj\Debug\net6.0\Sipay_Final.Core.csproj.AssemblyReference.cache
+D:\KD14\Sipay\FinalCase\Sipay_FinalCase_BesteYasak\Sipay_Final\Sipay_Final.Core\obj\Debug\net6.0\Sipay_Final.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\KD14\Sipay\FinalCase\Sipay_FinalCase_BesteYasak\Sipay_Final\Sipay_Final.Core\obj\Debug\net6.0\Sipay_Final.Core.AssemblyInfoInputs.cache
+D:\KD14\Sipay\FinalCase\Sipay_FinalCase_BesteYasak\Sipay_Final\Sipay_Final.Core\obj\Debug\net6.0\Sipay_Final.Core.AssemblyInfo.cs
+D:\KD14\Sipay\FinalCase\Sipay_FinalCase_BesteYasak\Sipay_Final\Sipay_Final.Core\obj\Debug\net6.0\Sipay_Final.Core.csproj.CoreCompileInputs.cache
+D:\KD14\Sipay\FinalCase\Sipay_FinalCase_BesteYasak\Sipay_Final\Sipay_Final.Core\obj\Debug\net6.0\Sipay_Final.Core.dll
+D:\KD14\Sipay\FinalCase\Sipay_FinalCase_BesteYasak\Sipay_Final\Sipay_Final.Core\obj\Debug\net6.0\refint\Sipay_Final.Core.dll
+D:\KD14\Sipay\FinalCase\Sipay_FinalCase_BesteYasak\Sipay_Final\Sipay_Final.Core\obj\Debug\net6.0\Sipay_Final.Core.pdb
+D:\KD14\Sipay\FinalCase\Sipay_FinalCase_BesteYasak\Sipay_Final\Sipay_Final.Core\obj\Debug\net6.0\ref\Sipay_Final.Core.dll

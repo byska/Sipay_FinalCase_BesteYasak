@@ -14,7 +14,7 @@ namespace Sipay_Final.Entities.DbSets
         public int? WaterBill { get; set; }
         public int? Dues { get; set; }
         public DateTime? BillDuesDate { get; set; } = DateTime.UtcNow;
-        public Apartment Apartment { get; set; }
+        public Apartment? Apartment { get; set; }
         public int ApartmentId { get; set; }
     }
 }
