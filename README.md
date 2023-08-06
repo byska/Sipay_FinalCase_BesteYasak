@@ -4,6 +4,7 @@ In this api project, there are two users, the apartment administrator and apartm
 
 Jwt technology was used for authorization in the project.
 Daily mail jobs are sent to the emails of users who do not pay bills.
+Middleware is used for global exception in the project.
 
 - Project developed with API, Jwt and Code-First approach.
 - Language : C# 
